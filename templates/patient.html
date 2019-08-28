@@ -1,0 +1,38 @@
+<html>
+<body>
+<form action="/search/" >
+    {% csrf_token %}
+    <select name="name">
+        <option name="Products">Patient</option>
+        <option name="idno">Idno</option>
+    </select>
+    <input type="text" name="idno" placeholder="Enter idno" required>
+    <button type="submit">Send</button>
+<table border="1">
+<tr >
+  <th>idno</th>
+  <th>name</th>
+  <th>Hb</th>
+    <th>GlbLevel </th>
+    <th>HlBac</th>
+    <th>Heatbeet</th>
+    <th>Oxeygenlevel</th>
+    <th> Bmi</th>
+</tr>
+{% for rec in recs %}
+<tr>
+  <td>{{ rec.idno }}</td>
+  <td>{{ rec.name }}</td>
+  <td>{{ rec.Hb }}</td>
+  <td>{{ rec.GlbLevel }}</td>
+  <td>{{ rec.HlBac }}</td>
+  <td>{{ rec.Heatbeet}}</td>
+  <td>{{ rec.Oxeygenlevel}}</td>
+  <td>{{ rec.Bmi}}</td>
+</tr>
+{% endfor %}
+</table>
+</form>
+<input type="button" value="Go Back!" onclick="history.back()">
+</body>
+</html>

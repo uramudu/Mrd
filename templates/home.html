@@ -1,0 +1,14 @@
+
+<html>
+<body>
+<form action="/search/" >
+    {% csrf_token %}
+    <select name="name">
+        <option name="Products">Patient</option>
+        <option name="idno">Idno</option>
+    </select>
+    <input type="text" name="idno" placeholder="Enter idno" required>
+    <button type="submit">Send</button>
+</form>
+</body>
+</html>

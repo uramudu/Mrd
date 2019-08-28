@@ -1,0 +1,34 @@
+<html>
+<body>
+<form>
+    <table border="1" >
+    <tr>
+        <td colspan="8" align="center">Patient Detaills</td>
+    </tr>
+        <tr>
+            <td  width="100" align="center">Idno</td>
+            <td  width="100" align="center">Name</td>
+            <td  width="100" align="center">Hb</td>
+            <td  width="100" align="center">GlbLevel</td>
+            <td  width="100" align="center">HlBac</td>
+            <td  width="100" align="center">Heatbeet</td>
+            <td  width="100" align="center">Oxeygenlevel</td>
+            <td  width="100" align="center">Bmi</td>
+        </tr>
+            {% for i in object_list %}
+            <tr>
+                <td align="center">{{ i.idno }}</td>
+                <td align="center">{{ i.name }}</td>
+                <td align="center">{{ i.Hb }}</td>
+                <td align="center">{{ i.GlbLevel }}</td>
+                <td align="center">{{ i.HlBac }}</td>
+                <td align="center">{{ i.Heatbeet }}</td>
+                <td align="center">{{ i.Oxeygenlevel }}</td>
+                <td align="center">{{ i.Bmi }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        <button type="submit"><a href="{% url "allids" %}">Analysis</a></button>
+</form>
+</body>
+</html>

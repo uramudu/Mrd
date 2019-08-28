@@ -1,0 +1,31 @@
+<html>
+<body>
+<form>
+    <table>
+        <tr>
+            <td>Idno</td>
+            <td>Name</td>
+            <td>Hb</td>
+            <td>GlbLevel</td>
+            <td>HlBac</td>
+            <td>Heatbeet</td>
+            <td>Oxeygenlevel</td>
+            <td>Bmi</td>
+        </tr>
+        {% for i in object_list %}
+        <tr>
+            <td>{{ i.idno }}</td>
+            <td>{{ i.name }}</td>
+            <td>{{ i.Hb }}</td>
+            <td>{{ i.GlbLevel }}</td>
+            <td>{{ i.HlBac }}</td>
+            <td>{{ i.Heatbeet }}</td>
+            <td>{{ i.Oxeygenlevel }}</td>
+            <td>{{ i.Bmi }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</form>
+{{ m }}
+</body>
+</html>

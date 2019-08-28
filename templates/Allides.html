@@ -1,0 +1,12 @@
+
+<table align="center" border="2">
+    <tr><th>Patient IDS</th></tr>
+    {% for x in object_list %}
+    <tr><th>
+        <a href="/onedetails{{ x.idno }}/">
+                {{ x.idno }}
+        </a>
+    </th></tr>
+    {% endfor %}
+
+</table>

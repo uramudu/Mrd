@@ -1,0 +1,94 @@
+{% include "home.html" %}
+{% load staticfiles %}
+<marquee><h1 style="color: red">Welcome To  Hospital</h1></marquee>
+<html>
+<body bgcolor="#deb887">
+<form action="/show/" method="post">
+    {% csrf_token %}
+
+
+<div class="sidebar" >
+    <p style="float: left ; padding-left: 180px;">
+    <table align=""><div class="sidebar" >
+
+        <tr>   <td><input type="text" name="Name" placeholder="Enter Name" required></td></tr>
+        <tr>   <td><input type="number" name="Age" placeholder="Enter Age" required></td></tr>
+        <tr>   <td>Gender:</td></tr>
+        <tr>   <td><input type="radio" name="Gen" value="Male">Male</td></tr>
+        <tr>   <td><input type="radio" name="Gen" value="FeMale">FeMale</td></tr>
+        <tr>   <td><input type="number" name="id" placeholder="Enter Idno" required></td></tr>
+        <tr>   <td><input type="number" name="Phone" placeholder="Enter Phone" required></td></tr>
+        <tr>   <td><input type="text" name="City" placeholder="Enter City" required></td></tr>
+        <tr>   <td>Blood Group:</td></tr>
+        <tr>   <td><input type="radio" name="Blood" value="O+">O+</td></tr>
+        <tr>   <td><input type="radio" name="Blood" value="O-">O-</td></tr>
+        <tr>   <td><input type="radio" name="Blood" value="A+">A+</td></tr>
+        <tr>   <td><input type="radio" name="Blood" value="A-">A-</td></tr>
+        <tr>   <td><input type="radio" name="Blood" value="B+">B+</td></tr>
+        <tr>   <td><input type="radio" name="Blood" value="B-">B-</td></tr>
+        <tr>   <td><input type="radio" name="Blood" value="AB+">AB+</td></tr>
+        <tr>   <td><input type="radio" name="Blood" value="AB-">AB-</td></tr>
+        <tr>   <td><textarea name="Addres"  placeholder="Enter Address "></textarea></td></tr>
+</table>
+     </p>
+    <p style="float: right; padding-right: 120px;">
+    <table align="center">
+
+        <tr>
+            <td>
+                <h1>prescription:</h1>
+                <textarea name="Description"  placeholder="Enter Prescription" style="width:300px;height: 150px;"></textarea></td></tr>
+            </td>
+        </tr>
+    <tr>
+        <td width="100"><h1>ATTACHMENT:</h1></td>
+    </tr>
+    <tr>
+        <td><h1>Description:</h1>
+            <input type="file" name="Description" placeholder="Enter File" required>
+        </td>
+    </tr>
+      <tr style="width: 10px">
+        <td><h1>prescription:</h1>
+            <input type="file" name="prescription" placeholder="Enter File" required>
+        </td>
+    </tr>
+    <tr>
+        <td><h1>Other Attachment:</h1>
+            <input type="file" name="OtherAtachment" placeholder="Enter File" required>
+        </td>
+    </tr>
+
+
+
+    </table>
+</div>
+
+
+
+    <table align="center" width="60">
+     <tr>   <td> Idno : <input type="text" name="idno" placeholder="Enter  Idno" required></td><tr>
+     <tr>   <td> Name : <input type="text" name="name" placeholder="Enter  Name" required></td></tr>
+     <tr>   <td> Hemb : <input type="number" name="Hb"  step="any" placeholder="Enter Hb Number "></td></tr>
+     <tr>   <td> GlbL : <input type="number" step="any" name="GlbLevel" placeholder="Enter Glb Level Number"></td></tr>
+     <tr>   <td> HBac : <input type="number" step="any" name="HlBac" placeholder="Enter HlBac Number"></td></tr>
+     <tr>   <td> Htbe : <input type="number" step="any" name="Heatbeet" placeholder="Enter Heatbeet Number"></td></tr>
+     <tr>   <td> Oxgn : <input type="number" step="any" name="Oxeygenlevel" placeholder="Enter Oxeygen level Number"></td></tr>
+     <tr>   <td> Bmie : <input type="number" step="any" name="Bmi" placeholder="Enter Bmi Number"></td></tr>
+    </table>
+
+
+
+
+
+
+</table>
+    <table align="center" >
+        <tr>
+            <td width=""><button type="submit" style="width: 180px;" >Save</button></td>
+        </tr>
+    </table>
+</form>
+{{ message }}
+</body>
+</html>

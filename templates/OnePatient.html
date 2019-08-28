@@ -1,0 +1,34 @@
+<html>
+<body>
+<form>
+    <table border="1">
+        <tr>
+            <td width="100">Idno</td>
+            <td width="100">Name</td>
+            <td width="100">Hb</td>
+            <td width="100">GlbLevel</td>
+            <td width="100">HlBac</td>
+            <td width="100">Heatbeet</td>
+            <td width="100">Oxeygenlevel</td>
+            <td width="100">Bmi</td>
+            {#  <td width="100">Total Ammount</td>#}
+        </tr>
+
+            <tr>
+            <td>{{ object.idno }}</td>
+            <td>{{ object.name }}</td>
+            <td>{{ object.Hb }}</td>
+            <td>{{ object.GlbLevel }}</td>
+            <td>{{ object.HlBac }}</td>
+            <td>{{ object.Heatbeet }}</td>
+            <td>{{ object.Oxeygenlevel }}</td>
+            <td>{{ object.Bmi }}</td>
+           {#  <td><a href="{% url "Ammount" %}">Total Ammount</a></td>#}
+        </tr>
+    </table>
+    <h1>{{ object.name }}</h1>
+
+{{ message }}
+</form>
+</body>
+</html>
